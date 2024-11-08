@@ -100,7 +100,7 @@ function FormCreate() {
     const handleSubmit = () => {
         // 입력된 데이터 취합
         const dataToSubmit = formFields;
-        callFunction(appId, "createNewEvent", {
+        callFunction(appId, "createNewEventSPARCS", {
             name: name,
             description: description,
             form: JSON.stringify(dataToSubmit),
