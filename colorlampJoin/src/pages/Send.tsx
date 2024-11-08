@@ -25,7 +25,7 @@ const CenterTextWrapper = styled.div`
   gap: 2px;
 `;
 
-function JoinEvent() {
+export function Send() {
   useEffect(() => {
     setSize(390, 172);
   }, []);
@@ -95,7 +95,7 @@ function JoinEvent() {
     <VStack spacing={16}>
       <HStack justify="between">
         <Text color="txt-black-darkest" typo="24" bold>
-          Tutorial
+          JoinSend
         </Text>
         <Button
           colorVariant="monochrome-dark"
@@ -138,4 +138,4 @@ function JoinEvent() {
   );
 }
 
-export default JoinEvent;
+export default Send;

@@ -95,7 +95,7 @@ export function Send() {
     <VStack spacing={16}>
       <HStack justify="between">
         <Text color="txt-black-darkest" typo="24" bold>
-          Tutorial
+          ManageSend
         </Text>
         <Button
           colorVariant="monochrome-dark"

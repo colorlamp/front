@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { isMobile } from "./utils/userAgent";
 import Send from "./pages/Send";
-import ManageEvent from "./pages/ManageEvent";
 import JoinEvent from "./pages/JoinEvent";
-import Announcement from "./pages/Announcement";
+import Form from "./pages/Form";
+import FinishForm from "./pages/FinishForm";
 
 export const Router = () => {
   return (
@@ -17,9 +17,10 @@ export const Router = () => {
             </div>
           }
         />
-        <Route path="/manageEvent" element={<ManageEvent />} />
-        <Route path="/joinEvent" element={<JoinEvent />} />
-        <Route path="/announcement" element={<Announcement />} />
+        <Route path="/joinEvent/" element={<JoinEvent />} />
+        <Route path="/form/:eventId" element={<Form />} />
+        <Route path="/finishForm/:eventTitle" element={<FinishForm />} />
+        <Route path="*" element={<JoinEvent />} />
       </Routes>
     </BrowserRouter>
   );
