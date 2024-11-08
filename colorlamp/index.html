@@ -9,5 +9,13 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+    var appearance = window.ChannelIOWam.getWamData('appearance')
+      if (appearance === 'dark') {
+        document.body.style.backgroundColor = '#464748'
+      } else {
+        document.body.style.backgroundColor = '#FFFFFF'
+      }
+    </script>
   </body>
 </html>
