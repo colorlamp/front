@@ -3,6 +3,13 @@ import { AppProvider, type ThemeName } from "@channel.io/bezier-react";
 
 import { getWamData } from "./utils/wam";
 import { Router } from "./Router";
+import { isMobile } from "./utils/userAgent";
+import styled from "styled-components";
+
+const PageWrapper = styled.div`
+  padding: ${() => (isMobile() ? "16px" : "0 24px 24px 24px")};
+`;
+
 function App() {
   const [theme, setTheme] = useState<ThemeName>("light");
 
@@ -13,7 +20,9 @@ function App() {
 
   return (
     <AppProvider themeName={theme}>
-      <Router />
+      <PageWrapper>
+        <Router />
+      </PageWrapper>
     </AppProvider>
   );
 }
